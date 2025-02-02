@@ -1,5 +1,5 @@
 ---
-categories: [Git-Blog, Basic]      # 카테고리 설정
+categories: [Blog]
 description: tip / info / warning / danger          # 포스트 설명
 date: 2025-01-28 21:00:00 +0900    # 날짜를 정확하게 기록하기 위해
 image:                             # 포스트 이미지 설정
