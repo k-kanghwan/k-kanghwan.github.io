@@ -1,7 +1,7 @@
 ---
 categories: [Programming, Python]      # 카테고리 설정
 description: ""
-date: 2025-02-03 19:00:00 +0900    # 날짜를 정확하게 기록하기 위해
+date: 2025-02-02 19:00:00 +0900    # 날짜를 정확하게 기록하기 위해
 # image:                             # 포스트 이미지 설정
 #     path: ""
 #     alt: ""
