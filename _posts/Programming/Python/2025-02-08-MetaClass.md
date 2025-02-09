@@ -6,7 +6,7 @@ date: 2025-02-08 18:00:00 +0900    # 날짜를 정확하게 기록하기 위해
 # image:                             # 포스트 이미지 설정
 #     path: ""
 #     alt: ""
-tags: [Type, MetaClass, Custom, 클래스동적생성]  # 태그 설정
+tags: [type, metaclass, custom, 클래스동적생성]  # 태그 설정
 ---
 
 - [메타클래스란](#메타클래스란)
@@ -162,6 +162,7 @@ def cus_replace(self, old, new):
     while old in self:
         self[self.index(old)] = new
 
+# type 상속
 # new -> init -> call 순서
 class CustomListMeta(type):
     # 클래스 인스턴스 생성(메모리 초기화)

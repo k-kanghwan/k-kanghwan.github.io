@@ -162,6 +162,7 @@ class SampleB(object):
 #### 외부 패키지 `multipledispatch` 사용
 - `pip install multipledispatch`
 - Annotation을 사용하여 메소드 오버로딩 가능
+- 인수 개수에 따라 해당 메소드 호출
 
 ```python
 from multipledispatch import dispatch

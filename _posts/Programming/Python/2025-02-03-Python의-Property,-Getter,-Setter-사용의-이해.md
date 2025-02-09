@@ -5,7 +5,7 @@ date: 2025-02-03 20:00:00 +0900    # 날짜를 정확하게 기록하기 위해
 # image:                             # 포스트 이미지 설정
 #     path: ""
 #     alt: ""
-tags: [Python, Property, Getter, Setter]  # 태그 설정
+tags: [python, property, getter, setter]  # 태그 설정
 ---
 
 > 📌 **목표** : Python의 Property, Getter, Setter에 대해

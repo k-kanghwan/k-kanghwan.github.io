@@ -5,7 +5,7 @@ date: 2025-02-01 18:00:00 +0900    # 날짜를 정확하게 기록하기 위해
 # image:                             # 포스트 이미지 설정
 #     path: ""
 #     alt: ""
-tags: [Python, Filter, Reduce, Map, Lambda]  # 태그 설정
+tags: [python, filter, reduce, map, lambda]  # 태그 설정
 ---
 
 > Lambda, Reduce, Map, Filter 에 대해 학습

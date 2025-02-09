@@ -5,7 +5,7 @@ date: 2025-02-02 19:00:00 +0900    # 날짜를 정확하게 기록하기 위해
 # image:                             # 포스트 이미지 설정
 #     path: ""
 #     alt: ""
-tags: [Python, contextmanager, decorator, with구현]  # 태그 설정
+tags: [python, contextmanager, decorator, with구현]  # 태그 설정
 ---
 
 > 📌 **목표** : contextmanager의 with문을 이해하고, 데코레이터를 사용해 함수형태로 구현하는 방법에 대해
