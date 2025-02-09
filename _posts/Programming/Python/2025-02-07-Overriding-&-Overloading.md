@@ -10,6 +10,7 @@ tags: [overriding, overloading, oop, 다형성, multipledispatch]  # 태그 설�
 
 - [Overriding](#overriding)
   - [Overriding 효과](#overriding-효과)
+  - [Overriding 강제](#overriding-강제)
 - [Overloading](#overloading)
   - [Overloading 효과](#overloading-효과)
   - [Overloading 예제](#overloading-예제)
@@ -76,6 +77,47 @@ Notification: System maintenance at midnight.
 Notification: [EMAIL] You have a new email.
 Notification: [SMS] Your OTP code is 123456.
 Notification: [PUSH] New friend request received.
+```
+
+
+### Overriding 강제
+
+**<u>Example</u>**
+```python
+from abc import ABC, abstractmethod
+
+# 추상 클래스 선언
+class Parent(ABC):
+    @abstractmethod
+    def must_override(self):
+        """반드시 오버라이딩해야 하는 메서드"""
+        pass
+
+# 자식 클래스에서 반드시 오버라이딩해야 함
+class Child(Parent):
+    def must_override(self):
+        print("자식 클래스에서 구현한 메서드")
+
+# 정상적인 사용
+child = Child()
+child.must_override()  # 출력: 자식 클래스에서 구현한 메서드
+
+# 아래 코드 실행 시 오류 발생 (오버라이딩하지 않음)
+class InvalidChild(Parent):
+    pass
+
+invalid_child = (
+    InvalidChild()
+)  # TypeError: Can't instantiate abstract class InvalidChild
+```
+
+**<u>Output</u>**
+```terminal
+자식 클래스에서 구현한 메서드
+Traceback (most recent call last):
+    File "overriding.py", line 25, in <module>
+        InvalidChild()
+TypeError: Can't instantiate abstract class InvalidChild with abstract method must_override
 ```
 
 ## Overloading
