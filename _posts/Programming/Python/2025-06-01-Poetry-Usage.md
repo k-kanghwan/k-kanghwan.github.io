@@ -22,6 +22,11 @@ tags: [python, pypi, pyproject.toml, poetry]  # 태그 설정
   - [pyproject.toml 에 직접 기입](#pyprojecttoml-에-직접-기입)
   - [GitHub Repository Dependencies 설정 방법](#github-repository-dependencies-설정-방법)
   - [Local Dependencies 설정 방법](#local-dependencies-설정-방법)
+- [Poetry로 PyPI Package Deploy](#poetry로-pypi-package-deploy)
+  - [준비사항](#준비사항)
+  - [`pyproject.toml` 설정](#pyprojecttoml-설정)
+  - [PyPI 토큰 정보 저장](#pypi-토큰-정보-저장)
+  - [PyPI Package Deploy](#pypi-package-deploy)
 
 
 ## Poetry 기본 사용법
@@ -124,4 +129,48 @@ dependencies = [
 dependencies = [
     "my-local-package @ file:///path/to/my-local-package"
 ]
+```
+
+## Poetry로 PyPI Package Deploy
+### 준비사항
+1. poetry 설치
+2. PyPI 계정 생성 
+3. 패키지명 중복 확인
+
+### `pyproject.toml` 설정
+
+```toml
+[project]
+name = "my-package"
+version = "0.1.1"
+description = "My Python Package"
+authors = [
+    {name = "kh.cha",email = "example@example.com"}
+]
+license = "MIT"
+readme = "README.md"
+# homepage = ""
+# repository = ""
+requires-python = ">=3.9"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+```
+
+### PyPI 토큰 정보 저장
+
+```terminal
+poetry config pypi-token.pypi <your-pypi-token>
+```
+
+### PyPI Package Deploy
+- `toml`의 패키지이름과 src 폴더의 패키지 이름이 일치해야 함
+
+```terminal
+poetry build
+poetry publish --build
 ```
