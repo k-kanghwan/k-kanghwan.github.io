@@ -15,8 +15,8 @@ tags: [python, pypi, pyproject.toml, poetry]  # 태그 설정
   - [Installation](#installation)
   - [프로젝트 생성](#프로젝트-생성)
     - [Poetry 기본 구조](#poetry-기본-구조)
-    - [pyproject.toml](#pyprojecttoml)
-  - [기존 프로젝트에 Poetry 적용](#기존-프로젝트에-poetry-적용)
+    - [생성된 pyproject.toml 예시](#생성된-pyprojecttoml-예시)
+  - [(참고)기존 프로젝트에 Poetry 적용](#참고기존-프로젝트에-poetry-적용)
 - [Dependencies 설정](#dependencies-설정)
   - [terminal 명령어로 추가](#terminal-명령어로-추가)
   - [pyproject.toml 에 직접 기입](#pyprojecttoml-에-직접-기입)
@@ -58,7 +58,7 @@ poetry new my_package
             __init__.py
 ```
 
-#### pyproject.toml
+#### 생성된 pyproject.toml 예시
 
 ```toml
 [project]
@@ -66,7 +66,7 @@ name = "my-package"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "kh.cha",email = "star2kis@nate.com"}
+    {name = "author",email = "author@example.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.11"
@@ -82,7 +82,7 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 ```
 
-### 기존 프로젝트에 Poetry 적용
+### (참고)기존 프로젝트에 Poetry 적용
 
 ```terminal
 cd {your_project_directory}
