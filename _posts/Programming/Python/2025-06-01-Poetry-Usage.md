@@ -26,7 +26,7 @@ tags: [python, pypi, pyproject.toml, poetry]  # 태그 설정
   - [준비사항](#준비사항)
   - [`pyproject.toml` 설정](#pyprojecttoml-설정)
   - [PyPI 토큰 정보 저장](#pypi-토큰-정보-저장)
-  - [PyPI Package Deploy](#pypi-package-deploy)
+  - [PyPI Package Deploy(PyPI 패키지 배포)](#pypi-package-deploypypi-패키지-배포)
 
 
 ## Poetry 기본 사용법
@@ -167,7 +167,7 @@ build-backend = "poetry.core.masonry.api"
 poetry config pypi-token.pypi <your-pypi-token>
 ```
 
-### PyPI Package Deploy
+### PyPI Package Deploy(PyPI 패키지 배포)
 - `toml`의 패키지이름과 src 폴더의 패키지 이름이 일치해야 함
 
 ```terminal
