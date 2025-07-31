@@ -1,8 +1,17 @@
 from PIL import Image
 import os
 
+# Input image path to resize for preview
+# This is the path to the image that you want to resize for preview
+TARGET_IMAGE_PATH = "assets/img/Git-Blog/post_poetry.jpg"
 
-# fmt: on
+IMAGE_WIDTH = 1200
+IMAGE_HEIGHT = 630
+
+IMAGE_RATIO_WIDTH = 1.91
+IMAGE_RATIO_HEIGHT = 1
+
+
 # 1. 이미지 크기 확인 함수
 def get_image_size(image_path):
     try:
@@ -13,15 +22,19 @@ def get_image_size(image_path):
         print(f"이미지 처리 중 오류 발생: {e}")
         return None, None
 
+
 # 2. 이미지 리사이즈 함수
 def resize_image(image_path, output_path, new_width, new_height):
     try:
         with Image.open(image_path) as img:
             resized_img = img.resize((new_width, new_height))
             resized_img.save(output_path)
-            print(f"이미지가 성공적으로 {new_width}x{new_height} 크기로 저장되었습니다.")
+            print(
+                f"이미지가 성공적으로 {new_width}x{new_height} 크기로 저장되었습니다."
+            )
     except Exception as e:
         print(f"이미지 처리 중 오류 발생: {e}")
+
 
 # resize image width = 1.91 : height = 1
 def resize_image_191(image_path, output_path, new_width):
@@ -30,24 +43,28 @@ def resize_image_191(image_path, output_path, new_width):
             new_height = int(new_width / 1.91)
             resized_img = img.resize((new_width, new_height))
             resized_img.save(output_path)
-            print(f"이미지가 성공적으로 {new_width}x{new_height} 크기로 저장되었습니다.")
+            print(
+                f"이미지가 성공적으로 {new_width}x{new_height} 크기로 저장되었습니다."
+            )
     except Exception as e:
         print(f"이미지 처리 중 오류 발생: {e}")
 
+
 # 3. 이미지 확장자 체크 함수
 def check_image_extension(image_path):
-    allowed_extensions = ['.jpg', '.jpeg', '.png', '.gif']
+    allowed_extensions = [".jpg", ".jpeg", ".png", ".gif"]
     _, ext = os.path.splitext(image_path)
     if ext.lower() in allowed_extensions:
         return True
     else:
         return False
 
+
 if __name__ == "__main__":
     from pathlib import Path
-    
+
     # 사용 예시
-    target_image_path = Path("assets/img/Git-Blog/prompts.png")
+    target_image_path = Path(TARGET_IMAGE_PATH)
     image_name = target_image_path.stem
 
     # 1. 이미지 크기 확인
